@@ -10,10 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_20_131250) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_18_164240) do
+  create_table "groups", force: :cascade do |t|
+    t.string "admin"
+    t.string "student_voter"
+    t.string "delegate"
+    t.string "candidate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "nominees", force: :cascade do |t|
     t.string "name"
     t.integer "votes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_groups", force: :cascade do |t|
+    t.string "user_id"
+    t.string "group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password"
+    t.string "gender"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

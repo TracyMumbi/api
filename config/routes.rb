@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :user_groups
+  resources :groups
+  resources :users
   resources :nominees
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
