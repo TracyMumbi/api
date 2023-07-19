@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_18_164240) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_19_205142) do
+  create_table "candidates", force: :cascade do |t|
+    t.string "reg_no"
+    t.string "student_name"
+    t.string "student_email"
+    t.integer "voting_phone_number"
+    t.string "department"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "groups", force: :cascade do |t|
     t.string "admin"
     t.string "student_voter"

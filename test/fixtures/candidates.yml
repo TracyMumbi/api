@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reg_no: MyString
+  student_name: MyString
+  student_email: MyString
+  voting_phone_number: 1
+  department: MyString
+
+two:
+  reg_no: MyString
+  student_name: MyString
+  student_email: MyString
+  voting_phone_number: 1
+  department: MyString
