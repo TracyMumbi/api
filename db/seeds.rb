@@ -14,5 +14,5 @@ end
   )
 
   20.times do
-    vote = Vote.create!(VVPAT_ref: "#359q950450945", condidate_selected: Faker::Internet.username,actual_vote_count: rand(1..10))
+    vote = Vote.create!(VVPAT_ref: "#359q950450945", condidate_selected: Faker::Name.name, actual_vote_count: rand(1..10))
   end
