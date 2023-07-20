@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_19_205142) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_20_031055) do
   create_table "candidates", force: :cascade do |t|
     t.string "reg_no"
     t.string "student_name"
@@ -49,6 +49,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_19_205142) do
     t.string "email"
     t.string "password"
     t.string "gender"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.string "VVPAT_ref"
+    t.string "condidate_selected"
+    t.string "actual_vote_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
