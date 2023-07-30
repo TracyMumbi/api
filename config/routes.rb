@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :campuses
   resources :votes
   resources :candidates
   resources :user_groups

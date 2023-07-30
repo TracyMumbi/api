@@ -16,3 +16,7 @@ end
   20.times do
     vote = Vote.create!(VVPAT_ref: "#359q950450945", condidate_selected: Faker::Name.name, actual_vote_count: rand(1..10))
   end
+
+ campus1 = Campuse.create!(name: "main", location: "Juja", type_campus: "main")
+ campus2 = Campuse.create!(name: "Karen", location: "Karen", type_campus: "satellite")
+ campus3 = Campuse.create!(name: "Nrb-cbd", location: "Nairobi CBD", type_campus: "satellite")
