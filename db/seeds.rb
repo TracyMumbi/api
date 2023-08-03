@@ -20,3 +20,10 @@ end
  campus1 = Campuse.create!(name: "main", location: "Juja", type_campus: "main")
  campus2 = Campuse.create!(name: "Karen", location: "Karen", type_campus: "satellite")
  campus3 = Campuse.create!(name: "Nrb-cbd", location: "Nairobi CBD", type_campus: "satellite")
+
+ hall1 = Hall.create!(name: "Hall1")
+ hall2 = Hall.create!(name: "Hall2")
+ hall3 = Hall.create!(name: "Hall3")
+ hall4 = Hall.create!(name: "Hall4")
+ hall5 = Hall.create!(name: "Hall5")
+ hall6 = Hall.create!(name: "Hall6")
