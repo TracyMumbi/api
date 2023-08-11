@@ -29,3 +29,8 @@ end
  hall4 = Hall.create!(name: "Hall4")
  hall5 = Hall.create!(name: "Hall5")
  hall6 = Hall.create!(name: "Hall6")
+
+ position = Position.create!(name: "President")
+ position = Position.create!(name: "Vice President")
+ position = Position.create!(name: "Secretary")
+ position = Position.create!(name: "Delegate")
