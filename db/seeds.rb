@@ -8,11 +8,11 @@ end
       email: Faker::Internet.email,
       password: "password",
       gender: Faker::Gender.binary_type,
-      status: ["active", "inactive"]
+      status: ["active", "inactive"].sample
     )
   end
   20.times do
-  candidate = Candidate.create!(reg_no: rand(1..10), student_name: Faker::Internet.username, student_email: Faker::Internet.email, voting_phone_number: Faker::PhoneNumber.phone_number_with_country_code, department: "Pau", position: "", status: ["active", "inactive"]
+  candidate = Candidate.create!(reg_no: rand(1..10), student_name: Faker::Internet.username, student_email: Faker::Internet.email, voting_phone_number: Faker::PhoneNumber.phone_number_with_country_code, department: "Pau", position: "", status: ["active", "inactive"].sample
   )
   end
 
