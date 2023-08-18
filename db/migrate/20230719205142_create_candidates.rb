@@ -6,6 +6,8 @@ class CreateCandidates < ActiveRecord::Migration[7.0]
       t.string :student_email
       t.integer :voting_phone_number
       t.string :department
+      t.string :position
+      t.string :status
 
       t.timestamps
     end

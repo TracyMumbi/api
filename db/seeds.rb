@@ -8,10 +8,11 @@ end
       email: Faker::Internet.email,
       password: "password",
       gender: Faker::Gender.binary_type,
+      status: ["active", "inactive"]
     )
   end
   20.times do
-  candidate = Candidate.create!(reg_no: rand(1..10), student_name: Faker::Internet.username, student_email: Faker::Internet.email, voting_phone_number: 071234567, department: "Pau"
+  candidate = Candidate.create!(reg_no: rand(1..10), student_name: Faker::Internet.username, student_email: Faker::Internet.email, voting_phone_number: Faker::PhoneNumber.phone_number_with_country_code, department: "Pau", position: "", status: ["active", "inactive"]
   )
   end
 
@@ -34,3 +35,8 @@ end
  position = Position.create!(name: "Vice President")
  position = Position.create!(name: "Secretary")
  position = Position.create!(name: "Delegate")
+
+
+ 50.times do
+  messages = Message.create!(sent_from: Faker::Internet.username, body: Faker::Quote.jack_handey)
+ end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_11_164212) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_18_193848) do
   create_table "campuses", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -25,6 +25,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_11_164212) do
     t.string "student_email"
     t.integer "voting_phone_number"
     t.string "department"
+    t.string "position"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,6 +42,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_11_164212) do
 
   create_table "halls", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "sent_from"
+    t.string "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -69,6 +78,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_11_164212) do
     t.string "email"
     t.string "password"
     t.string "gender"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
